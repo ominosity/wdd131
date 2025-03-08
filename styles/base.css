@@ -1,0 +1,157 @@
+/* Variable declarations */
+:root {
+    --max-screen-width: 1024px;
+    --header-font-family: "Noto Serif", serif;
+    --header-font-weight: 500;
+    --body-font-family: "Noto Sans", sans-serif;
+    --body-font-weight: 400;
+    --main-gray: rgb(122, 139, 153);
+    --top-bottom-blue: rgb(145, 173, 194);
+    --nav-purple: rgb(155, 160, 188);
+    --surround-gray: rgb(129, 129, 129);
+    --not-black: rgb(40, 40, 40);
+    --background-offwhite: rgb(221, 221, 221);
+}
+
+/* .noto-serif {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.noto-sans {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+} */
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    background-color: var(--surround-gray);
+    color: var(--not-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+header {
+    background-color: var(--top-bottom-blue);
+}
+
+header h1 {
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+nav a {
+    background-color: var(--nav-purple);
+    flex: 1 1;
+    text-decoration: none;
+    color: var(--not-black);
+    text-align: center;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: var(--top-bottom-blue);
+    font-weight: bold;
+}
+
+main {
+    max-width: var(--max-screen-width);
+    margin: 0 auto;
+    background-color: var(--main-gray);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+footer {
+    background-color: var(--top-bottom-blue);
+    text-align: center;
+    padding: 15px;
+}
+
+/* Styles for section cards */
+section {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: var(--background-offwhite);
+}
+
+section h2 {
+    text-align: center;
+    border-bottom: 3px dashed var(--main-gray);
+    margin-bottom: 10px;
+}
+
+section h3 {
+    text-align: center;
+    border-bottom: 1px solid var(--main-gray);
+    margin-bottom: 10px;
+    clear: both;
+}
+
+section ul {
+    margin-left: 30px;
+}
+
+section ul li {
+    margin-bottom: 5px;
+}
+
+section ul a:hover {
+    color: var(--surround-gray);
+}
+
+section li a,
+section li a:visited,
+section ul a:active {
+    color: var(--not-black);
+}
+
+img.profile:nth-of-type(odd) {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+img.profile:nth-of-type(even) {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+img.profile {
+    border: 2px solid var(--main-gray);
+}
+
+
