@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <meta name="author" content="Richard Burgener">
+    <meta name="description" content="A single page with inline JavaScript to test event listeners according to the https://byui-cit.github.io/learning-modules/modules/js/dom-events/prepare1/ lesson">
+</head>
+<body>
+    <input id="inputBox" type="text" />
+    <button id="submitButton">Submit</button>
+    <p id="output"></p>
+    <p id="log"></p>
+</body>
+<script>
+    const buttonElement = document.getElementById("submitButton");
+
+    function copyInput(event) {
+        console.log(event);
+        const inputElement = document.getElementById("inputBox");
+        const outputElement = document.getElementById("output");
+        outputElement.innerHTML = inputElement.value;
+    }
+    buttonElement.addEventListener("click", copyInput);
+
+    const log = document.querySelector("#log");
+    document.addEventListener("keydown", logKey);
+
+    function logKey(e) {
+        console.log(e);
+    }
+</script>
+</html>
