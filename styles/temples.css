@@ -1,0 +1,128 @@
+:root {
+    --header-font-family: "Noto Serif", serif;
+    --header-font-weight: 500;
+    --body-font-family: "Noto Sans", sans-serif;
+    --body-font-weight: 400;
+    --primary-color: #45503b;
+    --secondary-color: #dbd9db;
+    --highlight-color: #eee82c;
+}
+
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    background-color: var(--secondary-color);
+}
+
+header,
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+footer {
+    text-align: center;
+    padding: .5rem;
+}
+
+header h1 {
+    padding: 1rem;
+}
+
+/* Navigation styles to hide/show menu based on hamburger toggle */
+.menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: flex;
+    text-align: center;
+}
+
+.menu a {
+    flex: 1 1 auto;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: .7rem;
+    color: var(--secondary-color);
+    display: none;
+}
+
+.show a {
+    display: block;
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.toggle {
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle.show {
+    display: block;
+}
+
+#hamburger-icon {
+    top: 10px;
+    right: 10px;
+}
+
+#x-icon {
+    top: 14px;
+    right: 10px;
+    border: 1px solid var(--secondary-color);
+    padding: 0 10px 0 10px;
+}
+
+a.active {
+    color: var(--highlight-color);
+}
+
+a.active:hover {
+    color: black;
+}
+
+/* Image gallery styles */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+figure {
+    width: 100%;
+    padding: 15px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+figcaption {
+    font-size: .7rem;
+    text-align: center;
+}
