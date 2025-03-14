@@ -2,15 +2,15 @@
     header {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        align-items: center;
     }
-
+    
     .menu {
         flex-direction: row;
     }
-
+    
     .menu a {
         display: block;
+        align-content: center;
     }
 
     #hamburger-icon,
