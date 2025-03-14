@@ -1,16 +1,19 @@
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 680px) {
     header {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2.5fr 1fr;
     }
-    
+
     .menu {
         flex-direction: row;
+        justify-content: space-between;
     }
-    
+
     .menu a {
+        flex: 1 1 0;
         display: block;
         align-content: center;
+        min-width: 80px;
     }
 
     #hamburger-icon,
