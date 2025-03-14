@@ -1,0 +1,25 @@
+@media screen and (min-width: 800px) {
+    header {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu a {
+        flex: 1 1 auto;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: var(--secondary-color);
+        display: block;
+    }
+
+    #hamburger-icon,
+    #x-icon {
+        display: none;
+    }
+}
