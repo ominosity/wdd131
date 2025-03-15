@@ -20,4 +20,8 @@
     #x-icon {
         display: none;
     }
+
+    figcaption {
+        font-size: .8rem;
+    }
 }
