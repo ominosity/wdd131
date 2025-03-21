@@ -1,0 +1,150 @@
+/* Declare global CSS variables */
+:root {
+    --header-font-family: "Kolker Brush", cursive;
+    --header-font-weight: 400;
+    --body-font-family: "Raleway", sans-serif;
+    --body-font-weight: 400;
+    --sun-red: #bc002d;
+    --large-border: 10px solid var(--sun-red);
+}
+
+/* Reset Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+}
+
+main {
+    min-width: 260px;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
+
+h1 {
+    text-align: center;
+    color: var(--sun-red);
+    font-size: 60px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 45px;
+}
+
+section {
+    margin: 10px;
+    padding: 20px;
+    max-width: 564px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--sun-red);
+    color: white;
+}
+
+.data-point {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.data-point .label {
+    text-align: right;
+    margin: 0 5px 0 5px;
+}
+
+.data-point .label {
+    font-weight: bold;
+}
+
+.data-point .label::after {
+    content: ":"
+}
+
+.data-point .value {
+    margin: 0 5px 0 5px;
+}
+
+#weather-icon {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#hero {
+    width: 100%;
+    max-width: 564px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border: var(--large-border);
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 564px) {
+    main {
+        max-width: 1024px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr .3fr minmax(1fr, 252px) 20px;
+    }
+
+    h1 {
+        font-size: 75px;
+        border-bottom: var(--large-border);
+    }
+
+    main picture {
+        grid-area: 1 / 1 / 2 / 4;
+    }
+
+    section {
+        background-color: rgb(255, 255, 255, .9);
+    }
+
+    #data {
+        grid-area: 1 / 1 / 2 / 2;
+        align-self: start;
+        margin-left: 20px;
+    }
+
+    #weather {
+        grid-area: 1 / 3 / 2 / 4;
+        align-self: end;
+        margin-right: 20px;
+    }
+
+    #hero {
+        max-width: 1024px;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    #weather-icon {
+        display: none;
+    }
+
+    #weather h2::after {
+        content: " ☀️"
+    }
+}
