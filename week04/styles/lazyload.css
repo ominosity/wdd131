@@ -1,0 +1,12 @@
+@keyframes fadeFromBlack {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    animation-name: fadeFromBlack;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+}
