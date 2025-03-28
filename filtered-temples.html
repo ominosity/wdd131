@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="author" content="Richard Burgener">
+    <meta name="description" content="A responsive gallery of my favorite temples.">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&family=Noto+Serif:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <div id="hamburger-icon" class="toggle show">🍔</div>
+        <div id="x-icon" class="toggle">X</div>
+        <nav class="menu">
+            <a href="#" id="home" class="active">Home</a>
+            <a href="#" id="old">Old</a>
+            <a href="#" id="new">New</a>
+            <a href="#" id="large">Large</a>
+            <a href="#" id="small">Small</a>
+        </nav>
+    </header>
+    <main>
+        <h2 id="current-filter">Home</h2>
+        <div id="gallery">
+
+        </div>
+    </main>
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span> | Richard Burgener | Oregon
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
