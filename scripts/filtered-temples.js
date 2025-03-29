@@ -141,6 +141,14 @@ function createFragmentTemplate(currentTemple) {
     const sizeValue = document.createElement('span');
     const image = document.createElement('img');
 
+    // Add classes to the caption spans
+    locationLabel.classList.add('label');
+    locationValue.classList.add('value');
+    dedicatedLabel.classList.add('label');
+    dedicatedValue.classList.add('value');
+    sizeLabel.classList.add('label');
+    sizeValue.classList.add('value');
+
     // Fill the nodes with data
     header3.textContent = currentTemple.templeName;
     locationLabel.textContent = 'Location';
@@ -151,6 +159,8 @@ function createFragmentTemplate(currentTemple) {
     sizeValue.textContent = currentTemple.area;
     image.src = currentTemple.imageUrl;
     image.alt = `${currentTemple.templeName} Temple`;
+    image.width = 368;
+    image.height = 230;
 
     // Build the fragment
     fragment.appendChild(figure);
