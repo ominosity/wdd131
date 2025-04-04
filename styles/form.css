@@ -130,15 +130,25 @@ input[type="submit"]:active {
     padding: 0;
 }
 
+.required {
+    color: darkred;
+}
+
+select:required,
+input[type="date"]:required {
+    border-right: 5px solid darkred;
+    box-shadow: -5px 0px 0px darkred inset;
+}
+
 select:focus,
 input:focus,
 textarea:focus  {
-    border-bottom: 5px solid var(--highlight-color);
     box-shadow: 5px 5px 10px var(--primary-text-color) ;
 }
 
 /* Styles for review counter page */
-#review-confirmation p {
+#review-confirmation p,
+#review-form p {
     background-color: var(--primary-color);
     max-width: 500px;
     padding: 10px;
