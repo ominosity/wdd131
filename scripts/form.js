@@ -55,13 +55,15 @@ if (productSelectElement !== null) {
 }
 
 /* Track how many reviews the user has submitted */
-reviewCounter = parseInt(window.localStorage.getItem('review-counter'));
-if (reviewCounter) {
-    reviewCounter += 1;
-    reviewCounterElement.textContent = reviewCounter;
-    window.localStorage.setItem('review-counter', reviewCounter)
-} else {
-    reviewCounter = 1;
-    reviewCounterElement.textContent = reviewCounter;
-    window.localStorage.setItem('review-counter', reviewCounter)
+if (reviewCounterElement !== null) {
+    reviewCounter = parseInt(window.localStorage.getItem('review-counter'));
+    if (reviewCounter) {
+        reviewCounter += 1;
+        reviewCounterElement.textContent = reviewCounter;
+        window.localStorage.setItem('review-counter', reviewCounter)
+    } else {
+        reviewCounter = 1;
+        reviewCounterElement.textContent = reviewCounter;
+        window.localStorage.setItem('review-counter', reviewCounter)
+    }
 }
