@@ -1,0 +1,113 @@
+/* CSS variables for consistency across the site */
+:root {
+    --header-font-family: "Playfair Display", serif;
+    --header-font-weight: 600;
+    --body-font-family: "Alice", serif;
+    --body-font-weight: 400;
+    --primary-color: #1f3039;
+    --primary-background: #e5e7ec;
+    --secondary-color: #214156;
+    --border-radius: 20px;
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+/* Standard selectors */
+body {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-family: var(--body-font-family);
+    font-weight: var(--body-font-weight);
+    color: var(--primary-background);
+    background-color: var(--secondary-color);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: var(--border-radius);
+}
+
+h1 {
+    background-color: inherit;
+}
+
+header,
+footer {
+    color: var(--primary-background);
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+li {
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+p,
+figcaption {
+    margin: 10px auto;
+    padding-left: 15px;
+}
+
+
+
+.wireframe {
+    border: 3px dashed var(--primary-color);
+}
+
+.swatches {
+    min-height: 50px;
+}
+
+.swatch {
+    height: 44px;
+    width: 44px;
+    border: 1px solid var(--primary-color);
+    margin-right: 5px;
+    float: left;
+}
+
+.primary-color-swatch {
+    background-color: var(--primary-color);
+}
+
+.primary-background-swatch {
+    background-color: var(--primary-background);
+}
+
+.secondary-color-swatch {
+    background-color: var(--secondary-color);
+}
+
+.playfair {
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+}
