@@ -8,6 +8,7 @@
     --primary-background: #e5e7ec;
     --secondary-color: #214156;
     --border-radius: 20px;
+    --menu-border: 1px solid var(--primary-background);
 }
 
 /* Reset Styles */
@@ -43,8 +44,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-label {
+h6 {
     font-family: var(--body-font-family);
     font-weight: var(--body-font-weight);
     color: var(--primary-background);
@@ -56,6 +56,8 @@ label {
 
 h1 {
     background-color: inherit;
+    font-size: 48px;
+    margin: 0 20px;
 }
 
 header,
@@ -65,6 +67,52 @@ footer {
     text-align: center;
     border-radius: var(--border-radius);
 }
+
+footer {
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+nav a {
+    flex: 1;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--primary-background);
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--primary-background);
+    border-bottom: 1px solid var(--primary-background);
+    font-family: var(--header-font-family);
+    font-weight: var(--header-font-weight);
+    font-size: 36px;
+}
+
+nav a:last-of-type {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+nav a.active {
+    background-color: var(--primary-color);
+    color: var(--primary-background);
+}
+
+nav a:hover
+{
+    color: var(--primary-color);
+    background-color: var(--primary-background);
+}
+
+nav a.active {
+    background-color: black;
+    color: var(--primary-background);
+    cursor: default;
+}
+
+
 
 li {
     margin-left: 50px;
@@ -78,7 +126,10 @@ figcaption {
 }
 
 
+/* Form Styles */
 
+
+/* Siteplan class styles */
 .wireframe {
     border: 3px dashed var(--primary-color);
 }
@@ -110,4 +161,32 @@ figcaption {
 .playfair {
     font-family: var(--header-font-family);
     font-weight: var(--header-font-weight);
+}
+
+/* 
+    Portrait to landscape Breakpoint at 600
+*/
+@media screen and (min-width: 600px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    nav a {
+        border-right: var(--menu-border);
+        font-size: 20px;
+        align-content: center;
+        padding: 5px;
+    }
+
+    nav a:first-of-type {
+        border-radius: 0 0 0 var(--border-radius);
+    }
+
+    nav a:last-of-type {
+        border-right: none;
+        border-radius: 0 0 var(--border-radius) 0;
+    }
 }
