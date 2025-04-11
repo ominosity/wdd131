@@ -1,0 +1,44 @@
+/* Siteplan styles */
+li {
+margin-left: 50px;
+margin-top: 5px;
+}
+
+p,
+figcaption {
+margin: 10px auto;
+padding-left: 15px;
+}
+
+.wireframe {
+border: 3px dashed var(--primary-color);
+}
+
+.swatches {
+min-height: 50px;
+}
+
+.swatch {
+height: 44px;
+width: 44px;
+border: 1px solid var(--primary-color);
+margin-right: 5px;
+float: left;
+}
+
+.primary-color-swatch {
+background-color: var(--primary-color);
+}
+
+.primary-background-swatch {
+background-color: var(--primary-background);
+}
+
+.secondary-color-swatch {
+background-color: var(--secondary-color);
+}
+
+.playfair {
+font-family: var(--header-font-family);
+font-weight: var(--header-font-weight);
+}

@@ -26,36 +26,62 @@
             <a href="food.html" target="_self">Culinary Delights</a>
         </nav>
     </header>
-    <main>
+    <main id="home">
         <section>
             <h2>About Us</h2>
-            <p></p>
-            <img>
+            <div class="description">
+                <p>We are Richard and Lyndsie Burgener and this website is our chance to share the natural and culinary
+                    wonders we've discovered in the western half of the state of Oregon. </p>
+            </div>
+            <img src="images/caesar-and-us.webp" alt="Lyndsie and Richard posing with Caesar, the no-drama llama"
+                width="342" class="child">
         </section>
         <section>
             <h2>Why Oregon?</h2>
-            <p></p>
-            <img>
+            <div class="description">
+                <p>Several years ago, we traveled from our lifetime state of Utah to explore the Oregon coast. Every day
+                    we were treated to a new amazing sight, from the rugged coastline to the lush old-growth vegetation
+                    to waterfalls. </p>
+                <p>At the end of our trip, we had planned to spend a couple of nights in California, our favorite
+                    vacation state for our entire marriage. This trip was different. As soon as we crossed the state
+                    line, we felt like we had left something special behind.</p>
+                <p>As we talked on the very long drive back to Utah, we realized that we had both had the same feeling
+                    at some part of our trip. That somehow, however unlikely, Oregon felt like it should be "home".
+                    Within a couple of months, we were building a house in the city of Albany and moved in 5 months
+                    later.</p>
+            </div>
+            <img src="images/misty-road.webp" alt="An ethereal picture of a foggy dirt road through trees" width="600"
+                loading="lazy">
         </section>
         <section>
-            <div class="form">
-                <h2>Newsletter Sign-up Form</h2>
-                <form method="get" action="thanks.html">
+            <h2>Newsletter</h2>
+            <p>Sign up today for our newsletter to hear about all of our exciting adventures. As we continue to explore
+                this
+                beautiful state of ours, we'll keep you updated about our newest finds and what we're thinking about for
+                our
+                next outing. </p>
+            <form method="get" action="thanks.html" autocomplete="on">
+                <fieldset>
+                    <legend>Newsletter Sign-up Form<br>
+                        <span class="subtitle">Items marked with a pink <span class="required">*</span> are
+                            required</span>
+                    </legend>
                     <label>
-                        Your Name
-                        <input type="text" name="name" id="name">
+                        Your Name <span class='required'>*</span>
+                        <input type="text" name="name" id="name" required>
                     </label>
                     <label>
-                        Your Email
-                        <input type="email" name="email" id="email">
+                        Your Email <span class='required'>*</span>
+                        <input type="email" name="email" id="email" required>
                     </label>
                     <label>
                         Home state/country <span class="optional">(optional)</span>
                         <input type="text" name="home-state" id="home-state">
                     </label>
-                </form>
-            </div>
-            <img>
+                    <input type="submit" value="Sign up for the Newsletter">
+                </fieldset>
+            </form>
+            <img src="images/sit-a-spell.webp" alt="A mossy stone bench in an old-growth forest" loading="lazy">
         </section>
     </main>
     <footer>
