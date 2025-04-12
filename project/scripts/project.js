@@ -83,14 +83,14 @@ const foodData = [{
     header: "Ona",
     description: "<p>In the seaside vacation town of Yachats (pronounced YAH-hots) lies this fantastic seafood restaurant. Signs up and down the 101 claim Moe's has the best clam chowder, but we've tried both and Ona's is vastly superior.</p><p>They also offer the best sourdough bread in the region. </p>",
     imagePath: "images/ona-chowder.webp",
-    imageDescription: "A bowl of clam chowder with two fired shrimp and two slices of buttered sourdough.",
+    imageDescription: "A bowl of clam chowder with two grilled shrimp and two slices of buttered sourdough.",
     imageWidth: 600,
     id: "ona"
 }, {
     header: "Brick and Mortar",
     description: "<p>If breakfast or brunch is on your to-do list and you're anywhere near the town of Albany before 2:00pm, head to downtown and stop at this delightful little restaurant. You can't go wrong with their omelets or any variation on eggs benedict, but make sure you order something with a side of toast. They include strawberry freezer jam that's to die for.</p><p>With such great food, you may wonder why we included this picture of hot chocolate. This is single-handedly the best cup of hot chocolate we've ever had at a restaurant. Order the large - you won't regret it!</p>",
     imagePath: "images/hot-chocolate.webp",
-    imageDescription: "A whipped-cream and sprinkle-topped amazing mug of hot chocolate.",
+    imageDescription: "A whipped-cream, chocolate syrup, and sprinkled amazing mug of hot chocolate.",
     imageWidth: 450,
     id: "brick",
     selected: false
