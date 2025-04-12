@@ -131,6 +131,7 @@ section h2 {
 
 section div.buttons {
     margin: 0 0 0 auto;
+    text-align: right;
 }
 
 section div.buttons button,
@@ -153,6 +154,11 @@ section p {
     margin: 20px;
 }
 
+section figure {
+    margin: 20px auto;
+    text-align: center;
+}
+
 section img {
     max-width: 600px;
     max-width: 95%;
@@ -160,8 +166,12 @@ section img {
     border-radius: 20px;
     box-shadow: 10px 10px 15px var(--primary-color);
     border: 2px solid var(--primary-color);
-    margin: 20px auto;
     padding: 20px;
+}
+
+section figcaption {
+    margin-top: 10px;
+    font-size: 16px;
 }
 
 .description p {
@@ -296,7 +306,7 @@ input[type="submit"]:active {
         grid-area: 3 / 1 / 4 / 2;
     }
 
-    section:nth-of-type(odd) img {
+    section:nth-of-type(odd) figure {
         grid-area: 3 / 2 / 4 / 3;
     }
 
@@ -306,10 +316,9 @@ input[type="submit"]:active {
 
     section div.buttons {
         grid-area: 1 / 2 / 2 / 3;
-        justify-self: end;
     }
 
-    section:nth-of-type(even) img {
+    section:nth-of-type(even) figure {
         grid-area: 3 / 1 / 4 / 2;
     }
 

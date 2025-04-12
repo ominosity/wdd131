@@ -111,7 +111,10 @@ function buildASection(object) {
     <div class="description">
     ${object.description}
     </div>
-    <img src="${object.imagePath}" alt="${object.imageDescription}" width="${object.imageWidth}" loading="lazy">
+    <figure>
+        <img src="${object.imagePath}" alt="${object.imageDescription}" width="${object.imageWidth}" loading="lazy">
+        <figcaption>${object.imageDescription}</figcaption>
+    </figure>
     </section>`
 }
 
