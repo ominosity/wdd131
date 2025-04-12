@@ -62,7 +62,7 @@ const waterfallData = [{
     selected: false
 }, {
     header: "Watson Falls",
-    description: "<p>In the southern part of the Willamette valley you'll find the Rogue-Umpqua Scenic Byway. This 172 mile byway travels alongside the Umpqua and Rogue rivers and is known as the &quot;Highway of Waterfall&quot;. In the spring you can see water cascading down hillsides on either side of the highway, and many gorgeous vistas are just a short hike away.</p><p>Richard took this photograph from the hike to Watson Falls, about halfway between the trailhead and the walking bridge below the bigger falls. </p>",
+    description: "<p>In the southern part of the Willamette valley you'll find the Rogue-Umpqua Scenic Byway. This 172 mile byway travels alongside the Umpqua and Rogue rivers and is known as the &quot;Highway of Waterfalls&quot;. In the spring you can see water cascading down hillsides on either side of the highway, and many gorgeous vistas are just a short hike away.</p><p>Richard took this photograph from the hike to Watson Falls, about halfway between the trailhead and the walking bridge below the bigger falls. </p>",
     imagePath: "images/watson-falls.webp",
     imageDescription: "A picturesque set of falls found about halfway between the trail head and the bridge.",
     imageWidth: 500,
@@ -90,7 +90,7 @@ const foodData = [{
     header: "Brick and Mortar",
     description: "<p>If breakfast or brunch is on your to-do list and you're anywhere near the town of Albany before 2:00pm, head to downtown and stop at this delightful little restaurant. You can't go wrong with their omelets or any variation on eggs benedict, but make sure you order something with a side of toast. They include strawberry freezer jam that's to die for.</p><p>With such great food, you may wonder why we included this picture of hot chocolate. This is single-handedly the best cup of hot chocolate we've ever had at a restaurant. Order the large - you won't regret it!</p>",
     imagePath: "images/hot-chocolate.webp",
-    imageDescription: "A meaty omelet, mortar-style hash browns, and sourdough bread with strawberry freezer jam.",
+    imageDescription: "A whipped-cream and sprinkle-topped amazing mug of hot chocolate.",
     imageWidth: 450,
     id: "brick",
     selected: false
