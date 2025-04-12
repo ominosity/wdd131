@@ -4,6 +4,7 @@ const modifiedDateElement = document.getElementById('modified-date');
 const coastElement = document.getElementById("coast");
 const waterfallElement = document.getElementById("waterfalls");
 const foodElement = document.getElementById("food");
+const savedDestinationsElement = document.getElementById("saved-destinations");
 
 /* Update footer information */
 const today = new Date().getFullYear();
@@ -98,9 +99,7 @@ const foodData = [{
 /* Template for turning data entries into website sections */
 function buildASection(object) {
     let buttonText = ''
-    if (localStorage.getItem(`${object.id}`) === true) {
-        buttonText = 'Saved!';
-    } else {
+    if (localStorage.getItem(`${object.id}`) !== true) {
         buttonText = 'Save Destination';
     }
     return `<section>
@@ -109,7 +108,7 @@ function buildASection(object) {
     ${object.description}
     </div>
     <div class="buttons">
-        <button class="savedDestinations">Show <span class="saved-count"></span> Saved Destinations</button>
+        <a href="saved-list.html" target="_self"><button class="saved-destinations">Show <span class="saved-count"></span> Saved Destinations</button></a>
         <button id="button_${object.id}" value="${object.id}" class="save">${buttonText}</button>
     </div>
     <img src="${object.imagePath}" alt="${object.imageDescription}" width="${object.imageWidth}" loading="lazy">
@@ -140,12 +139,14 @@ foodData.forEach(element => destinations.push(element));
 
 /* Iterate through all destinations, adding the event listeners
 to destinations on the current page */
-for (let destination of destinations) {
-    let buttonID = `button_${destination.id}`;
-    let buttonElement = document.getElementById(buttonID);
-    // Check if element is on current page and add listener if it is
-    if (buttonElement) {
-        buttonElement.addEventListener('click', () => toggleDestination(destination.id, buttonElement));
+function addEventListenersToSaveButtons() {
+    for (let destination of destinations) {
+        let buttonID = `button_${destination.id}`;
+        let buttonElement = document.getElementById(buttonID);
+        // Check if element is on current page and add listener if it is
+        if (buttonElement) {
+            buttonElement.addEventListener('click', () => toggleDestination(destination.id, buttonElement));
+        }
     }
 }
 
@@ -162,14 +163,14 @@ function toggleDestination(destination, buttonElement) {
 }
 
 function showSavedButtons() {
-    const savedDestinationButtons = document.querySelectorAll(".savedDestinations");
+    const savedDestinationButtons = document.querySelectorAll(".saved-destinations");
     for (item of savedDestinationButtons) {
         item.classList.remove("hide");
     }
 }
 
 function hideSavedButtons() {
-    const savedDestinationButtons = document.querySelectorAll(".savedDestinations");
+    const savedDestinationButtons = document.querySelectorAll(".saved-destinations");
     for (item of savedDestinationButtons) {
         item.classList.add("hide");
     }
@@ -195,6 +196,21 @@ function toggleSavedButtons() {
     }
     else hideSavedButtons()
 }
+
+/* Load saved destinations on the saved-list page */
+
+if (savedDestinationsElement) {
+    const savedDestinations = [];
+    for (let destination of destinations) {
+        if (localStorage.getItem(destination.id) == "true") {
+            savedDestinations.push(destination);
+        }
+    }
+    const savedSections = savedDestinations.map(item => buildASection(item));
+    savedDestinationsElement.innerHTML = savedSections.join(' ');
+    toggleSavedButtons();
+}
+
 /* Run on initial load for a site revisit */
 toggleSavedButtons();
-
+addEventListenersToSaveButtons();
