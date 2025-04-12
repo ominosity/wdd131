@@ -240,6 +240,10 @@ input[type="submit"]:active {
     color: pink;
 }
 
+.hide {
+    display: none;
+}
+
 /* 
     Menu stacked to wide Breakpoint at 600
 */
@@ -283,19 +287,19 @@ input[type="submit"]:active {
         grid-area: 1 / 1 / 2 / 3;
     }
 
-    
+
     section p {
         grid-area: 2 / 1 / 3 / 3;
     }
-    
+
     section:nth-of-type(odd) div {
         grid-area: 3 / 1 / 4 / 2;
     }
-    
+
     section:nth-of-type(odd) img {
         grid-area: 3 / 2 / 4 / 3;
     }
-    
+
     section:nth-of-type(even) div {
         grid-area: 3 / 2 / 4 / 3;
     }
@@ -304,11 +308,11 @@ input[type="submit"]:active {
         grid-area: 1 / 2 / 2 / 3;
         justify-self: end;
     }
-    
+
     section:nth-of-type(even) img {
         grid-area: 3 / 1 / 4 / 2;
     }
-    
+
 
     form {
         max-width: 500px;
@@ -316,13 +320,9 @@ input[type="submit"]:active {
     }
 
     input[type="text"],
-    input[type="email"], 
+    input[type="email"],
     label {
         font-size: 18px;
         min-height: 40px;
-    }
-    
-    .hide {
-        display: none;
     }
 }

@@ -27,7 +27,7 @@ const coastalData = [{
     selected: false
 }, {
     header: "Shore Acres State Park",
-    description: "<p>Just outside of Coos Bay lies a magnificent English-style garden, preserved as a state park. The garden lies right on the coast, offering beautiful vistas of the ocean from the overlook.</p>",
+    description: "<p>Just outside of Coos Bay lies a magnificent set of English and Japanese style gardens, preserved as a state park. The garden lies right on the coast, offering beautiful vistas of the ocean from the overlook.</p><p>If you're looking for flowers, be sure to check out the bloom times before visiting. If flowers aren't your thing, or you're traveling in the winter, be sure to check out their Annual Holiday Lights display, featuring a magical walkthrough of Christmas-light plants and animals.</p>",
     imagePath: "images/shore-acres-overlook.webp",
     imageDescription: "A photograph taken from the Shore Acres State Park Overlook.",
     imageWidth: 600,
@@ -105,7 +105,7 @@ function buildASection(object) {
     return `<section>
     <h2>${object.header}</h2>
     <div class="buttons">
-        <a href="saved-list.html" target="_self"><button class="saved-destinations">Show <span class="saved-count"></span> Saved Destinations</button></a>
+        <a href="saved-list.html" target="_self"><button class="saved-destinations">Show <span class="saved-count"></span></button></a>
         <button id="button_${object.id}" value="${object.id}" class="save">${buttonText}</button>
     </div>
     <div class="description">
@@ -196,7 +196,14 @@ function toggleSavedButtons() {
     if (count > 0) {
         showSavedButtons();
         const savedCounts = document.querySelectorAll(".saved-count");
-        savedCounts.forEach(item => item.innerText = count);
+        // savedCounts.forEach(item => item.innerText = count);
+        for (let item of savedCounts) {
+            if (count == 1) {
+                item.innerText = "1 Saved Destination";
+            } else {
+                item.innerText = `${count} Saved Destinations`;
+            }
+        }
     }
     else hideSavedButtons()
 }
@@ -211,7 +218,7 @@ if (savedDestinationsElement) {
     }
     const savedSections = savedDestinations.map(item => buildASection(item));
     savedDestinationsElement.innerHTML = savedSections.join(' ');
-    
+
     toggleSavedButtons();
 
     /* Now that the DOM is in place, add extra event handlers to hide
