@@ -104,12 +104,12 @@ function buildASection(object) {
     }
     return `<section>
     <h2>${object.header}</h2>
-    <div class="description">
-    ${object.description}
-    </div>
     <div class="buttons">
         <a href="saved-list.html" target="_self"><button class="saved-destinations">Show <span class="saved-count"></span> Saved Destinations</button></a>
         <button id="button_${object.id}" value="${object.id}" class="save">${buttonText}</button>
+    </div>
+    <div class="description">
+    ${object.description}
     </div>
     <img src="${object.imagePath}" alt="${object.imageDescription}" width="${object.imageWidth}" loading="lazy">
     </section>`
@@ -151,12 +151,12 @@ function addEventListenersToSaveButtons() {
 }
 
 /* Toggle destination saves */
-function toggleDestination(destination, buttonElement) {
-    if (localStorage.getItem(destination) == 'true') {
-        localStorage.setItem(destination, 'false');
+function toggleDestination(destinationID, buttonElement) {
+    if (localStorage.getItem(destinationID) == 'true') {
+        localStorage.setItem(destinationID, 'false');
         buttonElement.innerText = 'Save Destination';
     } else {
-        localStorage.setItem(destination, 'true');
+        localStorage.setItem(destinationID, 'true');
         buttonElement.innerText = 'Unsave Destination!';
     }
     toggleSavedButtons()
