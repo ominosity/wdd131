@@ -162,6 +162,7 @@ function toggleDestination(destinationID, buttonElement) {
     toggleSavedButtons()
 }
 
+/* Show the button-links to the saved list */
 function showSavedButtons() {
     const savedDestinationButtons = document.querySelectorAll(".saved-destinations");
     for (item of savedDestinationButtons) {
@@ -169,6 +170,7 @@ function showSavedButtons() {
     }
 }
 
+/* Hide the button-links to the saved list */
 function hideSavedButtons() {
     const savedDestinationButtons = document.querySelectorAll(".saved-destinations");
     for (item of savedDestinationButtons) {
@@ -176,6 +178,8 @@ function hideSavedButtons() {
     }
 }
 
+/* Look through local storage, count saved items, and show buttons 
+   if there are any. */
 function toggleSavedButtons() {
     /* Iterate through local store items that match destination ids */
     let count = 0;
@@ -198,7 +202,6 @@ function toggleSavedButtons() {
 }
 
 /* Load saved destinations on the saved-list page */
-
 if (savedDestinationsElement) {
     const savedDestinations = [];
     for (let destination of destinations) {
@@ -208,9 +211,21 @@ if (savedDestinationsElement) {
     }
     const savedSections = savedDestinations.map(item => buildASection(item));
     savedDestinationsElement.innerHTML = savedSections.join(' ');
+    
     toggleSavedButtons();
+
+    /* Now that the DOM is in place, add extra event handlers to hide
+       sections when they are unaved */
+    const allSaveButtonElements = document.querySelectorAll(".save");
+    for (let element of allSaveButtonElements) {
+        element.addEventListener('click', self => hideSection(self.target));
+    }
 }
 
+function hideSection(button) {
+    const parentElement = button.closest('section');
+    parentElement.classList.add('hide');
+}
 /* Run on initial load for a site revisit */
 toggleSavedButtons();
 addEventListenersToSaveButtons();
